@@ -1,0 +1,115 @@
+/***** Общие стили по главным блокам: *****/
+html, body {margin: 0; padding: 0;}
+#wrapper {
+	width: 1200px;
+	margin: 10px auto;
+}
+#header, #footer {
+	height: 72px;
+	margin: 0;
+	padding: 0;
+}
+.hr {
+	margin: 0;
+	width: 1200px;
+	height: 2px;
+	background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+	background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+	background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+	background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+	/***** Для старых IE: *****/
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#808080', GradientType=0);
+}
+#centralArea {
+	margin: 10px auto;
+	position: relative;
+}
+#axis-num {
+	margin: 0;
+	padding: 0;
+}
+#axis-bg {
+	margin: 0 auto;
+	width: 578px;
+	padding: 25px;
+	background-color: #808080;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	behavior: url(styles/pie.htc);
+}
+/***** Блок стилей подписей осей шахматной доски: *****/
+.top-letters, .bot-letters, .left-numbers, .right-numbers {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	list-style-type: none;
+	font: bold 18px Calibri, sans-serif;
+	color: #EEE;
+}
+.top-letters {top: 2px; left: 346px;}
+.bot-letters {top: 603px; left: 346px;}
+.left-numbers {
+	line-height: 72px;
+	top: 25px;
+	left: 294px;
+}
+.right-numbers {
+	line-height: 72px;
+	top: 25px;
+	left: 897px;
+}
+.top-letters>li, .bot-letters>li {
+	float: left;
+	margin-right: 61px;
+}
+/***** Стили таблицы шахматной доски: *****/
+table {border-spacing: 2px 2px; background-color: #EEE;}
+td {margin: 0; padding: 0;}
+.darkCells {
+	background: #B0B0B0;
+	width: 70px;
+	height: 70px;
+}
+.lightCells {
+	background: azure;
+	width: 70px;
+	height: 70px;
+}
+.onBoard {/* Здесь ничего не нужно писать */}
+/***** Стили исходных блоков с шахматными фигурами: *****/
+.hideElem {display: none;}
+#container-top, #container-bottom {
+	width: 1120px;
+	height: 70px;
+	margin: 0 auto;
+}
+.black-fig, .white-fig {
+	width: 70px;
+	height: 70px;
+	float: left;
+}
+.black-fig:hover, .white-fig:hover {
+	background-color: #EEE;
+	cursor: pointer;
+}
+.black-fig>p, .white-fig>p, .onBoard>p {
+	margin: 0;
+	padding: 0;
+	font-size: 45px;
+	font-family: Calibri, Arial Unicode MS, sans-serif;
+	line-height: 70px;
+	text-align: center;
+	color: hsl(170, 50%, 15%);
+}
+.black-fig>p:hover, .white-fig>p:hover {
+	font-size: 60px;
+}
+/***** Стили нижнего блока с контактами: *****/
+#contacts>p {
+	font: 18px Calibri, sans-serif;
+	text-align: center;
+	color: #808080;
+	padding: 0;
+	margin: 5px;
+}
